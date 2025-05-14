@@ -1,0 +1,407 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+  word-wrap: break-word;
+}
+
+body {
+
+  color: #333;
+  line-height: 1.6;
+  font-size: 16px;
+  height: 100vh;
+  
+  font-family: sans-serif;
+}
+html {
+  scroll-behavior: smooth;
+}
+/* Navbar Styles */
+header {
+  background-color: rgba(10, 10, 10, 0.7); /* Slightly Transparent */
+  padding: 10px 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+  transition: background-color 0.3s ease;
+}
+
+/* Solid Navbar on Scroll (JavaScript will add this class) */
+header.scrolled {
+  background-color: #272727; /* Solid Black */
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+nav .logo {
+  flex: 1;
+}
+
+nav .logo img {
+  height: 40px;
+  transition: filter 0.3s;
+}
+nav .logo img:hover {
+  filter: brightness(0) invert(1);
+}
+
+nav .nav-menu {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+  align-items: center;
+}
+
+nav .nav-menu li {
+  display: inline-block;
+}
+
+nav .nav-menu li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 16px;
+  transition: color 0.3s;
+  position: relative;
+}
+nav .nav-menu li a:hover {
+  color: #b19777; /* Same color as logo hover effect */
+}
+
+/* Hover Effect (Underline Animation) */
+nav .nav-menu li a::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  background-color: #b19777;
+  left: 0;
+  bottom: -4px;
+  transition: width 0.3s;
+}
+
+nav .nav-menu li a:hover {
+  color: #b19777;
+}
+
+nav .nav-menu li a:hover::after {
+  width: 100%;
+}
+
+nav .menu-toggle {
+  display: none;
+  cursor: pointer;
+  color: #fff;
+  font-size: 24px;
+}
+
+/* Mobile Responsive Navbar */
+@media (max-width: 768px) {
+  nav .nav-menu {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    background-color: #272727;
+    padding: 10px 0;
+  }
+
+  nav .nav-menu.active {
+    display: flex;
+  }
+
+  nav .menu-toggle {
+    display: block;
+  }
+
+  nav .nav-menu li {
+    margin: 10px 0;
+  }
+}
+/* Hero Section with Video Styles */
+.hero {
+  position: relative;
+  min-height: 60vh; /* or 50vh */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 0 20px;
+  color: #fff;
+  overflow: hidden;
+}
+
+
+/* Background Video Styles */
+.hero-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+}
+
+/* Hero Content Styles (Overlay on Video) */
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 700px;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 15px;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 25px;
+}
+
+/* Responsive Font Sizes */
+@media (max-width: 768px) {
+     .hero {
+    min-height: 40vh;
+  }
+  
+  .hero h1 {
+    font-size: 2.2rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+}
+/* About section with dark gray background and white text */
+.about-section {
+  background-color: #272727;
+  background-image: 
+    linear-gradient(to right, rgba(255,255,255,0.05) 1px, transparent 1px);
+  background-size: 400px 100%;
+  background-repeat: repeat;
+  color: #999999;
+  padding: 60px 0;
+}
+
+
+/* Center the content and use flexbox for two columns */
+.about-section .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px; /* side padding */
+  display: flex;
+  align-items: flex-start; /* top-align columns */
+  gap: 40px; /* space between columns */
+}
+
+/* Left column: text */
+.about-text {
+  flex: 1; /* take remaining space */
+}
+/* Heading style */
+.about-text h2 {
+  font-size: 2rem; /* adjust as needed */
+  margin-bottom: 20px;
+  /* You can use a font-family if required, e.g.: font-family: 'Arial', sans-serif; */
+}
+/* Paragraph style */
+.about-text p {
+  font-size: 1rem;
+  line-height: 1.6;
+}
+/* Right column: image container */
+.about-image {
+  flex: 1; /* take remaining space */
+  position: relative; /* for overlay positioning */
+  /* Optionally, set a max width or flex-basis if needed:
+     flex-basis: 600px; */
+}
+
+/* Add a subtle grid/pattern overlay behind the image */
+.about-image::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: linear-gradient(
+      rgba(255, 255, 255, 0.15) 1px,
+      transparent 1px
+    ),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.15) 1px, transparent 1px);
+  background-size: 20px 20px;
+  pointer-events: none; /* let mouse events pass through */
+}
+
+/* Style the image */
+.about-image img {
+  display: block;
+  width: 100%;
+  height: auto;
+  position: relative;
+  z-index: 1; /* place above the pattern */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+}
+@media (max-width: 768px) {
+  .about-section .container {
+    flex-direction: column;
+    align-items: center; /* center items when stacked */
+  }
+  .about-text,
+  .about-image {
+    width: 100%;
+  }
+  .about-image {
+    margin-top: 30px; /* space between text and image */
+  }
+}
+/* Behind the Code Section */
+.behind-code-section {
+  background-color: #1a1a1a;
+  background-image: linear-gradient(to right, rgba(255,255,255,0.05) 1px, transparent 1px);
+  background-size: 400px 100%;
+  background-repeat: repeat;
+  color: #ffffff;
+  padding: 80px 20px;
+  text-align: center;
+}
+
+
+.behind-code-section .section-title {
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+}
+
+.team-members {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.team-member {
+  text-align: center;
+}
+
+.team-member img {
+  width: 350px;
+  height: 350px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4); /* Subtle shadow */
+  transition: transform 0.3s ease;
+}
+
+.team-member h3 {
+  font-size: 1.5rem;
+  margin-top: 15px;
+}
+
+.team-member .role {
+  font-size: 1rem;
+  color: #cccccc;
+}
+
+/* Hover Effect for Subtle Scaling */
+.team-member:hover img {
+  transform: scale(1.05);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .team-members {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+/* Our Services Section */
+.our-services-section {
+  background-color: #0e0e0e;
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.04) 1px, transparent 1px);
+  background-size: 400px 100%;
+  background-repeat: repeat;
+  padding: 80px 20px;
+  text-align: center;
+}
+
+
+.our-services-section .section-title {
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+  color: #333;
+}
+
+.services-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+}
+
+.service-box {
+  background-color: #ffffff;
+  padding: 40px 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  width: 300px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+}
+
+.service-box .icon {
+  font-size: 3rem;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.service-box h3 {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+  color: #222;
+}
+
+.service-box p {
+  font-size: 1rem;
+  color: #555;
+}
+
+/* Hover Effect */
+.service-box:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+  .services-grid {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .service-box {
+    width: 45%;
+  }
+}
+
+@media (max-width: 768px) {
+  .service-box {
+    width: 100%;
+  }
+}

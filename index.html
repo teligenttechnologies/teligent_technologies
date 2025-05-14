@@ -1,0 +1,708 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Recreated Code Company website using HTML, CSS, and JavaScript."
+    />
+    <title>Code Company Clone</title>
+    <!-- Google Font: Poppins -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Font Awesome CDN -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css" />
+    <!-- Tailwind CDN (head me daalo) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- AOS CSS (head me daalo) -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  </head>
+  <body  class="overflow-x-hidden">
+    <!-- Navbar Section -->
+    <header>
+      <nav class="navbar">
+        <div class="logo">
+          <a href="#home">
+            <img src="assets/logo.png" alt="Code Company Logo" />
+          </a>
+        </div>
+        <ul class="nav-menu">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#code">Behind The Code</a></li>
+          <li><a href="#service">Our Services</a></li>
+          <li><a href="#work">Our Work</a></li>
+          <li><a href="#contact">Contact Us</a></li>
+        </ul>
+        <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+      </nav>
+    </header>
+
+    <!-- Main Content (Will be added step by step) -->
+    <main id="home">
+      <!-- Hero Section -->
+      <!-- Hero Section with Video Background -->
+      <section class="hero" id="home">
+        <video class="hero-video" autoplay muted loop playsinline>
+          <source src="assets/code-bg.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+        <div class="hero-content">
+          <h1>The Code Company</h1>
+          <p>Analog logic X digital artistry</p>
+        </div>
+      </section>
+      <!-- About the Company Section -->
+      <section class="about-section" id="about">
+        <div class="container">
+          <!-- Left column: Heading and text -->
+          <div class="about-text">
+            <h2
+              style="
+                color: #b19777;
+                font-size: 40px;
+                font-family: 'Oswald', sans-serif;
+                letter-spacing: 5px;
+                word-spacing: 3px;
+                font-weight: 400;
+                text-transform: uppercase;
+              "
+              data-aos="fade-up"
+            >
+              <spam style="color: white">About</spam> the company
+            </h2>
+            <p data-aos="fade-right">
+              The Code Company is a globally minded, Sofia based operation. Our
+              main job is the development of software products. We specialize in
+              ERP and CRM systems, custom IT solutions tailor-made for the
+              client’s needs, apps, online-shops and websites. We strive to
+              exceed our clients’ expectations by providing elegant and
+              efficient end-results, seamlessly integrating design and
+              functionality. Our work is mostly in the Health Care &
+              Hospital/Clinic, Automotive, Non-Profit, Architecture, Charity,
+              Consumer goods and Cosmetics sectors but we are eager to expand.
+              We also provide in-house Marketing services ranging from online
+              advertising to creation of logos, custom designs and photo shoots.
+            </p>
+          </div>
+          <!-- Right column: Image -->
+          <div class="about-image" data-aos="fade-up">
+            <img src="assets/about.jpg" alt="Office interior image" />
+          </div>
+        </div>
+      </section>
+      <!-- Behind the Code Section -->
+      <section class="behind-code-section" id="code">
+        <div class="container">
+          <h2
+            style="
+              font-size: 40px;
+              font-family: 'Oswald', sans-serif;
+              font-weight: 400;
+              color: #fff;
+              text-transform: uppercase;
+              position: relative;
+              letter-spacing: 10px;
+              word-spacing: 5px;
+              margin-bottom: 30px;
+            "
+            data-aos="fade-up"
+          >
+            The Main People Behind <span style="color: #b19777"> the Code</span>
+          </h2>
+          <div class="team-members">
+            <div class="team-member" data-aos="fade-right">
+              <img
+                src="https://www.codecompany.bg/img/team/Kris.jpg"
+                alt="John Doe"
+              />
+              <h3>John Doe</h3>
+              <p style="color: #999999" class="role">CEO</p>
+            </div>
+            <div class="team-member" data-aos="fade-up">
+              <img
+                src="https://www.codecompany.bg/img/team/Ivo.jpg"
+                alt="Jane Smith"
+              />
+              <h3>Jane Smith</h3>
+              <p style="color: #999999" class="role">Art Director</p>
+            </div>
+            <div class="team-member" data-aos="fade-left">
+              <img
+                src="https://www.codecompany.bg/img/team/Stefan.jpg"
+                alt="Mike Johnson"
+              />
+              <h3>Mike Johnson</h3>
+              <p style="color: #999999" class="role">Wizard of Design</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="bg-[#0e0e0e] text-white py-16 px-4" id="service">
+        <div class="max-w-6xl mx-auto">
+          <h2
+            class="text-4xl font-bold tracking-widest mb-12"
+            data-aos="fade-up"
+             style="
+                color: #b19777;
+                font-size: 40px;
+                font-family: 'Oswald', sans-serif;
+                letter-spacing: 5px;
+                word-spacing: 3px;
+                font-weight: 400;
+                text-transform: uppercase;
+              "
+          >
+            <span class="text-white">OUR</span>
+            <span class="text-[#b79b73]">SERVICES</span>
+          </h2>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Card 1 -->
+            <div
+              data-aos="fade-up"
+              data-aos-delay="0"
+              class="relative group bg-[#1a1a1a] rounded-xl p-5 border border-[#2a2a2a] transition duration-300 shadow-[0_0_10px_rgba(183,155,115,0.1)] hover:shadow-[0_0_20px_rgba(183,155,115,0.4)] font-[Poppins]"
+            >
+              <div
+                class="absolute top-3 right-3 w-9 h-9 rounded-full flex items-center justify-center text-sm font-bold bg-[#b79b73] text-[#0e0e0e] transition duration-300 group-hover:bg-[#0e0e0e] group-hover:text-[#b79b73] group-hover:ring-1 group-hover:ring-[#b79b73] group-hover:shadow-[0_0_8px_#b79b73]"
+              >
+                01
+              </div>
+              <img
+                src="https://www.codecompany.bg/img/icons/icon-1.png"
+                alt="Icon"
+                class="h-8 mb-4"
+              />
+              <h3
+                class="text-[#b79b73] text-sm tracking-widest uppercase mb-1 font-semilight"
+              >
+                IT Products Development
+              </h3>
+              <div class="w-6 h-[1px] bg-[#444] mb-3"></div>
+              <p class="text-gray-300 text-xs leading-relaxed font-light">
+                We make desktop programs depending on our clients’ needs...
+              </p>
+            </div>
+
+            <!-- Card 2 -->
+            <div
+              data-aos="fade-up"
+              data-aos-delay="100"
+              class="relative group bg-[#1a1a1a] rounded-xl p-5 border border-[#2a2a2a] transition duration-300 shadow-[0_0_10px_rgba(183,155,115,0.1)] hover:shadow-[0_0_20px_rgba(183,155,115,0.4)] font-[Poppins]"
+            >
+              <div
+                class="absolute top-3 right-3 w-9 h-9 rounded-full flex items-center justify-center text-sm font-bold bg-[#b79b73] text-[#0e0e0e] transition duration-300 group-hover:bg-[#0e0e0e] group-hover:text-[#b79b73] group-hover:ring-1 group-hover:ring-[#b79b73] group-hover:shadow-[0_0_8px_#b79b73]"
+              >
+                02
+              </div>
+              <img
+                src="https://www.codecompany.bg/img/icons/icon-3.png"
+                alt="Icon"
+                class="h-8 mb-4"
+              />
+              <h3
+                class="text-[#b79b73] text-sm tracking-widest uppercase mb-1 font-semilight"
+              >
+                Online Shops
+              </h3>
+              <div class="w-6 h-[1px] bg-[#444] mb-3"></div>
+              <p class="text-gray-300 text-xs leading-relaxed font-light">
+                CMS & e-commerce platforms like Magento, Wordpress, OpenCart...
+              </p>
+            </div>
+
+            <!-- Card 3 -->
+            <div
+              data-aos="fade-up"
+              data-aos-delay="200"
+              class="relative group bg-[#1a1a1a] rounded-xl p-5 border border-[#2a2a2a] transition duration-300 shadow-[0_0_10px_rgba(183,155,115,0.1)] hover:shadow-[0_0_20px_rgba(183,155,115,0.4)] font-[Poppins]"
+            >
+              <div
+                class="absolute top-3 right-3 w-9 h-9 rounded-full flex items-center justify-center text-sm font-bold bg-[#b79b73] text-[#0e0e0e] transition duration-300 group-hover:bg-[#0e0e0e] group-hover:text-[#b79b73] group-hover:ring-1 group-hover:ring-[#b79b73] group-hover:shadow-[0_0_8px_#b79b73]"
+              >
+                03
+              </div>
+              <img
+                src="https://www.codecompany.bg/img/icons/icon-3.png"
+                alt="Icon"
+                class="h-8 mb-4"
+              />
+              <h3
+                class="text-[#b79b73] text-sm tracking-widest uppercase mb-1 font-semilight"
+              >
+                ERP Systems
+              </h3>
+              <div class="w-6 h-[1px] bg-[#444] mb-3"></div>
+              <p class="text-gray-300 text-xs leading-relaxed font-light">
+                Warehouse programs, integrations, and automation tools.
+              </p>
+            </div>
+
+            <!-- Card 4 -->
+            <div
+              data-aos="fade-up"
+              data-aos-delay="300"
+              class="relative group bg-[#1a1a1a] rounded-xl p-5 border border-[#2a2a2a] transition duration-300 shadow-[0_0_10px_rgba(183,155,115,0.1)] hover:shadow-[0_0_20px_rgba(183,155,115,0.4)] font-[Poppins]"
+            >
+              <div
+                class="absolute top-3 right-3 w-9 h-9 rounded-full flex items-center justify-center text-sm font-bold bg-[#b79b73] text-[#0e0e0e] transition duration-300 group-hover:bg-[#0e0e0e] group-hover:text-[#b79b73] group-hover:ring-1 group-hover:ring-[#b79b73] group-hover:shadow-[0_0_8px_#b79b73]"
+              >
+                04
+              </div>
+              <img
+                src="https://www.codecompany.bg/img/icons/icon-2.png"
+                alt="Icon"
+                class="h-8 mb-4"
+              />
+              <h3
+                class="text-[#b79b73] text-sm tracking-widest uppercase mb-1 font-semilight"
+              >
+                Mobile Apps
+              </h3>
+              <div class="w-6 h-[1px] bg-[#444] mb-3"></div>
+              <p class="text-gray-300 text-xs leading-relaxed font-light">
+                Android and iOS development with modern frameworks.
+              </p>
+            </div>
+
+            <!-- Card 5 -->
+            <div
+              data-aos="fade-up"
+              data-aos-delay="400"
+              class="relative group bg-[#1a1a1a] rounded-xl p-5 border border-[#2a2a2a] transition duration-300 shadow-[0_0_10px_rgba(183,155,115,0.1)] hover:shadow-[0_0_20px_rgba(183,155,115,0.4)] font-[Poppins]"
+            >
+              <div
+                class="absolute top-3 right-3 w-9 h-9 rounded-full flex items-center justify-center text-sm font-bold bg-[#b79b73] text-[#0e0e0e] transition duration-300 group-hover:bg-[#0e0e0e] group-hover:text-[#b79b73] group-hover:ring-1 group-hover:ring-[#b79b73] group-hover:shadow-[0_0_8px_#b79b73]"
+              >
+                05
+              </div>
+              <img
+                src="https://www.codecompany.bg/img/icons/icon-3.png"
+                alt="Icon"
+                class="h-8 mb-4"
+              />
+              <h3
+                class="text-[#b79b73] text-sm tracking-widest uppercase mb-1 font-semilight"
+              >
+                Custom Integrations
+              </h3>
+              <div class="w-6 h-[1px] bg-[#444] mb-3"></div>
+              <p class="text-gray-300 text-xs leading-relaxed font-light">
+                Connect platforms, services, and APIs to streamline your
+                workflow.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="bg-[#0e0e0e] text-white py-20" id="work">
+        <div class="max-w-7xl mx-auto px-4">
+          <!-- Heading -->
+          <h2
+            class="text-4xl font-bold tracking-wider text-center mb-8 uppercase"
+            data-aos="fade-up"
+             style="
+                color: #b19777;
+                font-size: 40px;
+                font-family: 'Oswald', sans-serif;
+                letter-spacing: 5px;
+                word-spacing: 3px;
+                font-weight: 400;
+                text-transform: uppercase;
+              "
+          >
+            <span class="text-white">Our</span>
+            <span class="text-[#b79b73]">Work</span>
+          </h2>
+
+          <!-- Filter Buttons -->
+          <div
+             class="flex flex-wrap gap-3 justify-center items-center px-4 mb-6"
+          >
+            <button
+              class="filter-btn text-sm font-semilight uppercase px-4 py-2 rounded border border-[#b79b73] text-[#b79b73] active"
+              data-filter="all"
+            >
+              All
+            </button>
+            <button
+              class="filter-btn text-sm font-semilight uppercase px-4 py-2 rounded border border-[#b79b73] text-white hover:text-[#b79b73]"
+              data-filter="mobile"
+            >
+              Mobile Applications
+            </button>
+            <button
+              class="filter-btn text-sm font-semilight uppercase px-4 py-2 rounded border border-[#b79b73] text-white hover:text-[#b79b73]"
+              data-filter="web"
+            >
+              Web Applications
+            </button>
+            <button
+              class="filter-btn text-sm font-semilight uppercase px-4 py-2 rounded border border-[#b79b73] text-white hover:text-[#b79b73]"
+              data-filter="website"
+            >
+              Websites
+            </button>
+          </div>
+
+          <!-- Work Items -->
+          <div
+            class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-6"
+            id="work-items"
+          >
+            <!-- Card -->
+            <div
+              data-aos="fade-up"
+              data-aos-delay="100"
+              class="relative group bg-[#1a1a1a] rounded-xl p-5 border border-[#2a2a2a] transition duration-300 shadow-[0_0_10px_rgba(183,155,115,0.1)] hover:shadow-[0_0_20px_rgba(183,155,115,0.4)] font-[Poppins] work-item mobile"
+            >
+              <div
+                class="relative group overflow-hidden rounded-xl shadow-[0_0_0_0_rgba(183,155,115,0)] group-hover:shadow-[0_0_20px_5px_rgba(183,155,115,0.7)] transition-shadow duration-500"
+              >
+                <img
+                  src="https://www.codecompany.bg/img/ues.jpg"
+                  class="w-full h-[280px] object-cover group-hover:scale-110 transition duration-500"
+                />
+                <div
+                  class="absolute inset-0 bg-black bg-opacity-60 flex flex-col justify-center items-center opacity-0 group-hover:opacity-100 transition duration-300"
+                >
+                  <p class="text-sm text-[#b79b73]">Web Application</p>
+                  <h3 class="text-xl font-semibold text-white mt-2">
+                    Inventory System
+                  </h3>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card -->
+            <div
+              data-aos="fade-up"
+              data-aos-delay="100"
+              class="relative group bg-[#1a1a1a] rounded-xl p-5 border border-[#2a2a2a] transition duration-300 shadow-[0_0_10px_rgba(183,155,115,0.1)] hover:shadow-[0_0_20px_rgba(183,155,115,0.4)] font-[Poppins] work-item mobile"
+            >
+              <div
+                class="relative group overflow-hidden rounded-xl shadow-[0_0_0_0_rgba(183,155,115,0)] group-hover:shadow-[0_0_20px_5px_rgba(183,155,115,0.7)] transition-shadow duration-500"
+              >
+                <img
+                  src="https://www.codecompany.bg/img/projects/DoctorLilkova.PNG"
+                  class="w-full h-[280px] object-cover group-hover:scale-110 transition duration-500"
+                />
+                <div
+                  class="absolute inset-0 bg-black bg-opacity-60 flex flex-col justify-center items-center opacity-0 group-hover:opacity-100 transition duration-300"
+                >
+                  <p class="text-sm text-[#b79b73]">Web Application</p>
+                  <h3 class="text-xl font-semibold text-white mt-2">
+                    Inventory System
+                  </h3>
+                </div>
+              </div>
+            </div>
+
+            <!-- Add more cards with class: work-item + category (mobile/web/website) -->
+          </div>
+          <!-- Work Items -->
+          <div
+            class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-6"
+            style="margin-top: 40px"
+            id="work-items"
+          >
+            <!-- Card -->
+            <div
+              data-aos="fade-up"
+              data-aos-delay="100"
+              class="relative group bg-[#1a1a1a] rounded-xl p-5 border border-[#2a2a2a] transition duration-300 shadow-[0_0_10px_rgba(183,155,115,0.1)] hover:shadow-[0_0_20px_rgba(183,155,115,0.4)] font-[Poppins] work-item web"
+            >
+              <div
+                class="relative group overflow-hidden rounded-xl shadow-[0_0_0_0_rgba(183,155,115,0)] group-hover:shadow-[0_0_20px_5px_rgba(183,155,115,0.7)] transition-shadow duration-500"
+              >
+                <img
+                  src="https://www.codecompany.bg/img/projects/Adm.PNG"
+                  class="w-full h-[280px] object-cover group-hover:scale-110 transition duration-500"
+                />
+                <div
+                  class="absolute inset-0 bg-black bg-opacity-60 flex flex-col justify-center items-center opacity-0 group-hover:opacity-100 transition duration-300"
+                >
+                  <p class="text-sm text-[#b79b73]">Web Application</p>
+                  <h3 class="text-xl font-semibold text-white mt-2">
+                    Inventory System
+                  </h3>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card -->
+            <div
+              data-aos="fade-up"
+              data-aos-delay="100"
+              class="relative group bg-[#1a1a1a] rounded-xl p-5 border border-[#2a2a2a] transition duration-300 shadow-[0_0_10px_rgba(183,155,115,0.1)] hover:shadow-[0_0_20px_rgba(183,155,115,0.4)] font-[Poppins] work-item web"
+            >
+              <div
+                class="relative group overflow-hidden rounded-xl shadow-[0_0_0_0_rgba(183,155,115,0)] group-hover:shadow-[0_0_20px_5px_rgba(183,155,115,0.7)] transition-shadow duration-500"
+              >
+                <img
+                  src="https://www.codecompany.bg/img/projects/finesserent.PNG"
+                  class="w-full h-[280px] object-cover group-hover:scale-110 transition duration-500"
+                />
+                <div
+                  class="absolute inset-0 bg-black bg-opacity-60 flex flex-col justify-center items-center opacity-0 group-hover:opacity-100 transition duration-300"
+                >
+                  <p class="text-sm text-[#b79b73]">Web Application</p>
+                  <h3 class="text-xl font-semibold text-white mt-2">
+                    Inventory System
+                  </h3>
+                </div>
+              </div>
+            </div>
+
+            <!-- Add more cards with class: work-item + category (mobile/web/website) -->
+          </div>
+          <!-- Work Items -->
+          <div
+            class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-6"
+            style="margin-top: 40px"
+            id="work-items"
+          >
+            <!-- Card -->
+            <div
+              data-aos="fade-up"
+              data-aos-delay="100"
+              class="relative group bg-[#1a1a1a] rounded-xl p-5 border border-[#2a2a2a] transition duration-300 shadow-[0_0_10px_rgba(183,155,115,0.1)] hover:shadow-[0_0_20px_rgba(183,155,115,0.4)] font-[Poppins] work-item mobile"
+            >
+              <div
+                class="relative group overflow-hidden rounded-xl shadow-[0_0_0_0_rgba(183,155,115,0)] group-hover:shadow-[0_0_20px_5px_rgba(183,155,115,0.7)] transition-shadow duration-500"
+              >
+                <img
+                  src="https://www.codecompany.bg/img/projects/Readymodernhome.PNG"
+                  class="w-full h-[280px] object-cover group-hover:scale-110 transition duration-500"
+                />
+                <div
+                  class="absolute inset-0 bg-black bg-opacity-60 flex flex-col justify-center items-center opacity-0 group-hover:opacity-100 transition duration-300"
+                >
+                  <p class="text-sm text-[#b79b73]">Web Application</p>
+                  <h3 class="text-xl font-semibold text-white mt-2">
+                    Inventory System
+                  </h3>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card -->
+            <div
+              data-aos="fade-up"
+              data-aos-delay="100"
+              class="relative group bg-[#1a1a1a] rounded-xl p-5 border border-[#2a2a2a] transition duration-300 shadow-[0_0_10px_rgba(183,155,115,0.1)] hover:shadow-[0_0_20px_rgba(183,155,115,0.4)] font-[Poppins] work-item web"
+            >
+              <div
+                class="relative group overflow-hidden rounded-xl shadow-[0_0_0_0_rgba(183,155,115,0)] group-hover:shadow-[0_0_20px_5px_rgba(183,155,115,0.7)] transition-shadow duration-500"
+              >
+                <img
+                  src="https://www.codecompany.bg/img/projects/TNO.png"
+                  class="w-full h-[280px] object-cover group-hover:scale-110 transition duration-500"
+                />
+                <div
+                  class="absolute inset-0 bg-black bg-opacity-60 flex flex-col justify-center items-center opacity-0 group-hover:opacity-100 transition duration-300"
+                >
+                  <p class="text-sm text-[#b79b73]">Web Application</p>
+                  <h3 class="text-xl font-semibold text-white mt-2">
+                    Inventory System
+                  </h3>
+                </div>
+              </div>
+            </div>
+
+            <!-- Add more cards with class: work-item + category (mobile/web/website) -->
+          </div>
+          <!-- Work Items -->
+          <div
+            class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-6"
+            style="margin-top: 40px"
+            id="work-items"
+          >
+            <!-- Card -->
+            <div
+              data-aos="fade-up"
+              data-aos-delay="100"
+              class="relative group bg-[#1a1a1a] rounded-xl p-5 border border-[#2a2a2a] transition duration-300 shadow-[0_0_10px_rgba(183,155,115,0.1)] hover:shadow-[0_0_20px_rgba(183,155,115,0.4)] font-[Poppins] work-item website"
+            >
+              <div
+                class="relative group overflow-hidden rounded-xl shadow-[0_0_0_0_rgba(183,155,115,0)] group-hover:shadow-[0_0_20px_5px_rgba(183,155,115,0.7)] transition-shadow duration-500"
+              >
+                <img
+                  src="https://www.codecompany.bg/img/projects/AssiaPsiholog.jpg"
+                  class="w-full h-[280px] object-cover group-hover:scale-110 transition duration-500"
+                />
+                <div
+                  class="absolute inset-0 bg-black bg-opacity-60 flex flex-col justify-center items-center opacity-0 group-hover:opacity-100 transition duration-300"
+                >
+                  <p class="text-sm text-[#b79b73]">Web Application</p>
+                  <h3 class="text-xl font-semibold text-white mt-2">
+                    Inventory System
+                  </h3>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card -->
+            <div
+              data-aos="fade-up"
+              data-aos-delay="100"
+              class="relative group bg-[#1a1a1a] rounded-xl p-5 border border-[#2a2a2a] transition duration-300 shadow-[0_0_10px_rgba(183,155,115,0.1)] hover:shadow-[0_0_20px_rgba(183,155,115,0.4)] font-[Poppins] work-item website"
+            >
+              <div
+                class="relative group overflow-hidden rounded-xl shadow-[0_0_0_0_rgba(183,155,115,0)] group-hover:shadow-[0_0_20px_5px_rgba(183,155,115,0.7)] transition-shadow duration-500"
+              >
+                <img
+                  src="https://www.codecompany.bg/img/projects/Caramel.PNG"
+                  class="w-full h-[280px] object-cover group-hover:scale-110 transition duration-500"
+                />
+                <div
+                  class="absolute inset-0 bg-black bg-opacity-60 flex flex-col justify-center items-center opacity-0 group-hover:opacity-100 transition duration-300"
+                >
+                  <p class="text-sm text-[#b79b73]">Web Application</p>
+                  <h3 class="text-xl font-semibold text-white mt-2">
+                    Inventory System
+                  </h3>
+                </div>
+              </div>
+            </div>
+
+            <!-- Add more cards with class: work-item + category (mobile/web/website) -->
+          </div>
+        </div>
+      </section>
+      <section
+        class="py-24 px-6 md:px-12 bg-[#131313] font-[\'Plus Jakarta Sans\']"
+        id="contact"
+      >
+        <div
+          class="max-w-[1440px] mx-auto grid grid-cols-1 md:grid-cols-3 gap-10"
+        >
+          <!-- Column 1 -->
+          <div>
+            <h2 class="text-4xl text-white tracking-widest font-light mb-8"  style="
+                color: #b19777;
+                font-size: 40px;
+                font-family: 'Oswald', sans-serif;
+                letter-spacing: 5px;
+                word-spacing: 3px;
+                font-weight: 400;
+                text-transform: uppercase;
+              ">
+              CONTACT <span class="text-[#ffffff]">US</span>
+            </h2>
+            <p class="text-[#b3b3b3] text-base font-light leading-relaxed mb-6">
+              Healthy business relations are based on trust and mutual benefit.
+            </p>
+            <p class="text-[#b3b3b3] text-base font-light leading-relaxed mb-6">
+              Contact us to find how we can be of service to you. Feel free to
+              use the form provided or you can email us or directly call!
+            </p>
+            <p class="text-[#b3b3b3] text-base font-light leading-relaxed">
+              We prefer to see and hear you in person!
+            </p>
+          </div>
+
+          <!-- Column 2 -->
+          <div style="margin-top: 16%">
+            <p class="text-[#b3b3b3] text-base font-light mb-4">
+              <span class="text-[#b79b73]">Location:</span> Sofia
+            </p>
+            <p class="text-[#b3b3b3] text-base font-light mb-4">
+              <span class="text-[#b79b73]">Phone:</span> +359 878-866-678
+            </p>
+            <p class="text-[#b3b3b3] text-base font-light">
+              <span class="text-[#b79b73]">Email:</span>
+              thecodecompany@codecompany.bg
+            </p>
+          </div>
+
+          <!-- Column 3 (Form) -->
+          <div class="border border-[#b3b3b3] p-6 rounded">
+            <p class="text-[#b3b3b3] text-base font-light mb-4">
+              Drop us a line:
+            </p>
+            <form>
+              <input
+                type="text"
+                placeholder="Full Name"
+                class="w-full bg-[#1a1a1a] text-white placeholder:text-[#b3b3b3] px-4 py-3 mb-4 rounded outline-none border border-[#2a2a2a] text-sm font-light"
+              />
+              <input
+                type="email"
+                placeholder="Your Email"
+                class="w-full bg-[#1a1a1a] text-white placeholder:text-[#b3b3b3] px-4 py-3 mb-4 rounded outline-none border border-[#2a2a2a] text-sm font-light"
+              />
+              <select
+                class="w-full bg-[#c8a97e] text-black px-4 py-3 mb-4 rounded outline-none text-sm font-light"
+              >
+                <option>Select Service</option>
+                <option>Web Design</option>
+                <option>Mobile App</option>
+                <option>SEO</option>
+              </select>
+              <textarea
+                placeholder="Your Message"
+                class="w-full h-32 bg-[#1a1a1a] text-white placeholder:text-[#b3b3b3] px-4 py-3 mb-4 rounded outline-none border border-[#2a2a2a] text-sm font-light"
+              ></textarea>
+              <button
+                type="submit"
+                class="bg-[#c8a97e] text-white px-6 py-2 rounded font-light text-sm"
+              >
+                Send
+              </button>
+            </form>
+          </div>
+        </div>
+      </section>
+
+     <section
+  class="py-4 px-6 md:px-12 bg-[#131313] bg-[url('data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22200%22 height=%22100%22%3E%3Cline x1=%220%22 y1=%220%22 x2=%220%22 y2=%22100%22 stroke=%22%23ffffff%22 stroke-opacity=%220.04%22 stroke-width=%221%22 /%3E%3C/svg%3E')] bg-repeat bg-[length:200px_100%] font-['Plus Jakarta Sans']"
+>
+  <div class="max-w-[1440px] mx-auto grid grid-cols-1 md:grid-cols-3 gap-10">
+    <!-- Column 1 -->
+    <div>
+      <p class="text-[#b3b3b3] text-base font-light mb-4">
+        <span class="text-[#b79b73]">Phone:</span><br />
+        +359 878-866-678
+      </p>
+    </div>
+
+    <!-- Column 2 -->
+    <div>
+      <p class="text-[#b3b3b3] text-base font-light mb-4">
+        <span class="text-[#b79b73]">Email:</span><br />
+        thecodecompany@codecompany.bg
+      </p>
+    </div>
+
+    <!-- Column 3 -->
+    <div>
+      <p class="text-[#b3b3b3] text-base font-light mb-4">
+        <span class="text-[#b79b73]">Location:</span><br />
+        Sofia
+      </p>
+    </div>
+  </div>
+</section>
+
+    </main>
+
+    <!-- JavaScript File -->
+    <!-- AOS JS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init({ duration: 800, once: true });
+    </script>
+    <script src="main.js"></script>
+  </body>
+</html>

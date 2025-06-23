@@ -419,11 +419,7 @@ nav .menu-toggle {
   max-width: 1170px;
   margin: 0 20% 0 20%;
 }
-@media (max-width: 768px) {
-  .section-center{
-    margin: 0px 2% 0px 2%;
-  }
-}
+
 .question {
   background: #0e0e0e;
   border-radius: 0.5rem;
@@ -477,4 +473,10 @@ align-items: center;
 }
 .show-text .plus-icon {
   display: none;
+}
+
+@media (max-width: 768px) {
+  .section-center{
+    margin: 0px 2% 0px 2%;
+  }
 }
